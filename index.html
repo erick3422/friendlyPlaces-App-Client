@@ -61,12 +61,63 @@
 </section>
 
 
+<!-- We only want this  section to be visible after we sign in -->
+<section id = "user-sign-in">
+  <h2>Get All Books </h2>
+  <button id="books-index">Get All Books </button>
+  <hr>
+
+  <h2>Get One Book</h2>
+  <form id="books-show">
+    <input type="text" name="book[id]" placeholder="Book ID" required>
+    <!-- Since this button is inside a form, is has the type submit by default, clicked and form will be submitted -->
+    <button>Get Book</button>
+  </form>
+  <hr>
+
+  <h2>Delete Book</h2>
+  <form id="book-to-delete">
+    <input type="text" name="book[id]" placeholder="Book ID" required>
+    <!-- Since this button is inside a form, is has the type submit by default,
+clicked and will delete the specific book -->
+    <button>Destroy Book</button>
+  </form>
+
+  <h2>Update One Book</h2>
+  <form id="books-update">
+    <input type="text" name="book[id]" placeholder="Book ID" required>
+    <input type="text" name="book[title]" placeholder="Title" required>
+    <input type="text" name="book[author]" placeholder="Author" required>
+    <!-- Since this button is inside a form, is has the type submit by default,
+clicked and will update the specific book -->
+    <button>Update Book</button>
+  </form>
+  <hr>
+
+  <h2>Create New Place</h2>
+  <form id="place-create">
+    <input type="text" name="places[name]" placeholder="Name" required>
+    <input type="text" name="places[address]" placeholder="Address" required>
+    <input type="text" name="places[location]" placeholder="Location" required>
+    <input type="text" name="places[description]" placeholder="Description" required>
+    <!-- Since this button is inside a form, is has the type submit by default,
+clicked and will create the specific book -->
+    <button>Create Book</button>
+  </form>
+
+</section>
+
+
+
+
 <!-- Create a section for our user feedback-->
 <section>
   <div id="error-message"></div>
   <div id="message-display"></div>
   <div id="winner-message"></div>
+  <div id="books-display"></div>
 </section>
+
 
 
  </body>
