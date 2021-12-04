@@ -106,11 +106,39 @@ const signOutFailure = function (error) {
   console.error('signOutFailure ran. Error is :', error)
 }
 
+const changePasswordSuccess = function (responseData) {
+  // tell the user it was successful
+  $('#message-display').text('Changed password successfully!')
+
+  // remove existing classes, then add a green text-success class from bootstrap
+  $('#message-display').removeClass()
+  $('#message-display').addClass('text-success')
+
+  // clear (reset) all of the forms
+  $('form').trigger('reset')
+
+  console.log('responseData is', responseData)
+}
+
+const changePasswordFailure = function (error) {
+  // tell the user it was failure
+  $('#error-message').text('Changing passwords failed!')
+
+  // remove existing classes, then add a red text-danger class from bootstrap
+  $('#error-message').removeClass()
+  $('#error-message').addClass('text-danger')
+
+  // print the error
+  console.error('error is', error)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
   signInFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }

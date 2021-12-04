@@ -39,8 +39,26 @@ const signOut = function () {
   })
 }
 
+// formData will be our passwords object w/ old and new passwords
+const changePassword = function (formData) {
+  // make a request to PATCH /change-password
+  return $.ajax({
+    url: `${config.apiUrl}/change-password`,
+    method: 'PATCH',
+    // make sure to send the formData along as the body of our request
+    // this is similar to --data in the curl script
+    data: formData,
+    // Add our authorization header, so the api can use the token
+    // to know who is trying to change the password
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
-  signOut
+  signOut,
+  changePassword
 }

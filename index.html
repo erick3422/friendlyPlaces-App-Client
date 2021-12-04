@@ -34,8 +34,22 @@
 </form>
 </section>
 
+
+<!-- We only want this  section to be visible after we sign in -->
+<section id="after-sign-in">
+  <form id="change-password" class="border">
+    <fieldset>
+      <legend>Change Password</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password" required>
+      <input type="password" name="passwords[new]" placeholder="New Password" required>
+      <button class="btn btn-secondary">Change Password</button>
+    </fieldset>
+  </form>
+</section>
+
+
 <!-- Sign out form goes here-->
-<section id ="after-sign-in">
+<section id ="after-sign-out">
   <form id="sign-out" class="border">
     <fieldset>
       <h1>Psss.... Ready to leave</h1>

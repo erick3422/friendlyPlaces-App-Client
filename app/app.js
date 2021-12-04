@@ -11,4 +11,6 @@ $(() => {
   $('#sign-in').on('submit', userEvents.onSignIn)
   // Control the sign-out functions
   $('#sign-out').on('submit', userEvents.onSignOut)
+  // Control for Change Password functions
+  $('#change-password').on('submit', userEvents.OnChangePassword)
 })
