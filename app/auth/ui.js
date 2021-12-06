@@ -51,6 +51,10 @@ const signInSuccess = function (responseData) {
   $('#middle-sign-in').hide()
   // After we sign in, show the section with the id `after-sign-in`
   $('#after-sign-in').show()
+  // After we sign in, show the section with the id 'after-sign-out'
+  $('#after-sign-out').show()
+  // After we sign in, show the section with the id 'user-sign-in'
+  $('#user-sign-in').show()
   // After we sig in, show the section with the id `new-game`
   $('#new-game').show()
 
@@ -83,6 +87,10 @@ const signOutSuccess = function () {
 
   // Hide the "after sign in" elements
   $('#after-sign-in').hide()
+  // Hide the "after sign out" elements
+  $('#after-sign-out').hide()
+  // Hide the 'user-sign-in' element
+  $('#user-sign-in').hide()
   // Display the "before sign in" elements
   $('#before-sign-in').show()
   // Also show the element with the id `middle-sign-in`

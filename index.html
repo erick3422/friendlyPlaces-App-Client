@@ -12,26 +12,49 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+<div class="welcome">
+  <h1>Welcome to friendlyPlaces</h1>
+</div>
 
 <!-- Sign up form goes here-->
 <section id="before-sign-in">
+  <div class="container"> 
+    <div class="user signupBx">
+      <div class="formBx">
 <form id="sign-up">
   <legend>Sign up</legend>
   <input type="email" name="credentials[email]" placeholder="Email" required>
   <input type="password" name="credentials[password]" placeholder="Password" required>
   <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
-  <button>Sign Up</button>
+  <button class="btn">Sign Up</button>
 </form>
+</div>
+<div class="imgBx">
+  <img
+  src="./app/images/trees.jpg"
+  alt="nature">
+</div>
+</div>
+</div>
 </section>
 
 <!-- Sign in form goes here-->
 <section id= "middle-sign-in">
+  <div class="container">
+    <div class="user signinBx">
+      <div class="imgBx">
+        <img src="./app/images/nice.jpg" alt="place">
+      </div>
+      <div class="formBx">
 <form id="sign-in">
   <legend>Sign in</legend>
   <input type="email" name="credentials[email]" placeholder="Email" required>
   <input type="password" name="credentials[password]" placeholder="Password" required>
-  <button >Sign in</button>
+  <button class="btn" >Sign in</button>
 </form>
+</div>
+</div>
+</div>
 </section>
 
 
