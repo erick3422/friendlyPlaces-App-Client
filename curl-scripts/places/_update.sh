@@ -9,7 +9,7 @@ curl "${API}${URL_PATH}/${ID}" \
   --header "Content-Type: application/json" \
 --header "Authorization: Bearer ${TOKEN}" \
 --data '{
-    "places": {
+    "place": {
      "name": "'"${NAME}"'",
       "address": "'"${ADDRESS}"'",
       "location":"'"${LOCATION}"'",

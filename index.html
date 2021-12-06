@@ -63,46 +63,48 @@
 
 <!-- We only want this  section to be visible after we sign in -->
 <section id = "user-sign-in">
-  <h2>Get All Books </h2>
-  <button id="books-index">Get All Books </button>
+  <h2>Get All Places </h2>
+  <button id="places-index">Get All Places </button>
   <hr>
 
-  <h2>Get One Book</h2>
-  <form id="books-show">
-    <input type="text" name="book[id]" placeholder="Book ID" required>
+  <h2>Get Places</h2>
+  <form id="place-show">
+    <input type="text" name="places[id]" placeholder="Places ID" required>
     <!-- Since this button is inside a form, is has the type submit by default, clicked and form will be submitted -->
-    <button>Get Book</button>
+    <button>Show My Places</button>
   </form>
   <hr>
 
-  <h2>Delete Book</h2>
-  <form id="book-to-delete">
-    <input type="text" name="book[id]" placeholder="Book ID" required>
+  <h2>Delete Place</h2>
+  <form id="place-to-delete">
+    <input type="text" name="places[id]" placeholder="Places ID" required>
     <!-- Since this button is inside a form, is has the type submit by default,
 clicked and will delete the specific book -->
-    <button>Destroy Book</button>
+    <button>Destroy Place</button>
   </form>
 
-  <h2>Update One Book</h2>
-  <form id="books-update">
-    <input type="text" name="book[id]" placeholder="Book ID" required>
-    <input type="text" name="book[title]" placeholder="Title" required>
-    <input type="text" name="book[author]" placeholder="Author" required>
+  <h2>Update Place</h2>
+  <form id="place-update">
+ <input type="text" name="place[id]" placeholder="Place ID" required>
+  <input type="text" name="place[name]" placeholder="Name" required>
+  <input type="text" name="place[address]" placeholder="Address" required>
+  <input type="text" name="place[location]" placeholder="Location" required>
+  <input type="text" name="place[description]" placeholder="Description" required>
     <!-- Since this button is inside a form, is has the type submit by default,
 clicked and will update the specific book -->
-    <button>Update Book</button>
+    <button>Update Place</button>
   </form>
   <hr>
 
   <h2>Create New Place</h2>
   <form id="place-create">
-    <input type="text" name="places[name]" placeholder="Name" required>
-    <input type="text" name="places[address]" placeholder="Address" required>
-    <input type="text" name="places[location]" placeholder="Location" required>
-    <input type="text" name="places[description]" placeholder="Description" required>
+    <input type="text" name="place[name]" placeholder="Name" required>
+    <input type="text" name="place[address]" placeholder="Address" required>
+    <input type="text" name="place[location]" placeholder="Location" required>
+    <input type="text" name="place[description]" placeholder="Description" required>
     <!-- Since this button is inside a form, is has the type submit by default,
 clicked and will create the specific book -->
-    <button>Create Book</button>
+    <button>Create Place</button>
   </form>
 
 </section>
@@ -115,7 +117,7 @@ clicked and will create the specific book -->
   <div id="error-message"></div>
   <div id="message-display"></div>
   <div id="winner-message"></div>
-  <div id="books-display"></div>
+  <div id="places-display"></div>
 </section>
 
 
