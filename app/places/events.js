@@ -25,7 +25,7 @@ const onShowPlace = (event) => {
   console.log(formData)
 
   // extract the id from our form's data
-  const id = formData.place.id
+  const id = formData.places.id
 
   // Make an HTTP request, to show a single book based on its id
   api.show(id)

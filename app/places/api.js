@@ -7,56 +7,56 @@ const index = function () {
   // make sure to `return` the promise from $.ajax
   return $.ajax({
     // optional: because the default is 'GET'
-		method: 'GET',
-		// the url to our api + the url path (/books)
-		url: config.apiUrl + '/places',
-		headers: {
-			Authorization: 'Bearer ' + store.user.token
-		}
+    method: 'GET',
+    // the url to our api + the url path (/books)
+    url: config.apiUrl + '/places',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
 
-		// Bad practice: We are hard coding the url to our API below.
-		// This is bad, because in future units, we will have multiple APIS
-		// (a local and deployed API.)
-		// url: 'https://library-express-api.herokuapp.com/books'
-	})
+    // Bad practice: We are hard coding the url to our API below.
+    // This is bad, because in future units, we will have multiple APIS
+    // (a local and deployed API.)
+    // url: 'https://library-express-api.herokuapp.com/books'
+  })
 }
 
 // this function will make a GET request, for a single book
 // id - of the book we want to show
 const show = function (id) {
   return $.ajax({
-		// optional: same method as index
-		method: 'GET',
-		// use the path to a single book
-		url: config.apiUrl + '/places/' + id,
-		headers: {
-			Authorization: 'Bearer ' + store.user.token,
-		}
-	})
+    // optional: same method as index
+    method: 'GET',
+    // use the path to a single book
+    url: config.apiUrl + '/places/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
 }
 
 const destroy = function (id) {
   return $.ajax({
-		method: 'DELETE',
-		// the url to our api + the url path (/books)
-		url: config.apiUrl + '/places/' + id,
-		headers: {
-			Authorization: 'Bearer ' + store.user.token,
-		}
-	})
+    method: 'DELETE',
+    // the url to our api + the url path (/books)
+    url: config.apiUrl + '/places/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
 }
 
 const update = function (id, formData) {
   return $.ajax({
-		method: 'PATCH',
-		// the url to our api + the url path (/books)
-		url: config.apiUrl + '/places/' + id,
-		headers: {
-			Authorization: 'Bearer ' + store.user.token,
-		},
-		// So it hast the new tittle & author
-		data: formData
-	})
+    method: 'PATCH',
+    // the url to our api + the url path (/books)
+    url: config.apiUrl + '/places/' + id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    // So it hast the new tittle & author
+    data: formData
+  })
 }
 
 const create = function (formData) {
