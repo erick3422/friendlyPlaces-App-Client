@@ -36,6 +36,14 @@ As a user I want to see two forms of Sign Up or Sign In
 As a user I want to see cool animation of clicking button
 As a user I want to have unique experience
 
+### Wireframes
+
+[img](app/images/Screen%20Shot%202021-11-20%20at%209.53.46%20AM.png)
+
+### Relations (ERD)
+
+[img](app/images/Screen%20Shot%202021-11-20%20at%209.53.20%20AM.png)
+
 
 ## [License](LICENSE)
 
