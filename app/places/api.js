@@ -1,6 +1,7 @@
 // require the config file, so we have access to our API's url
 const config = require('../config')
-
+// require so you be able to store the place
+const store = require('../store')
 // this function, will make a request to GET /books (all the books)
 const index = function () {
   // make sure to `return` the promise from $.ajax
@@ -47,9 +48,13 @@ const update = function (id, formData) {
 }
 
 const create = function (formData) {
+  console.log('formData:', formData)
   return $.ajax({
-    method: 'POST',
     url: config.apiUrl + '/places/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
     // So it hast the new tittle & author
     data: formData
   })
