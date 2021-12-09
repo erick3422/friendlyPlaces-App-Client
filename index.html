@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>friendlyPlaces</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+<div class="welcome">
+  <h1>Welcome to friendlyPlaces</h1>
+</div>
+
+<!-- Sign up form goes here-->
+<section id="before-sign-in">
+  <div class="container"> 
+    <div class="user signupBx">
+      <div class="formBx">
+<form id="sign-up">
+  <legend>Sign up</legend>
+  <input type="email" name="credentials[email]" placeholder="Email" required>
+  <input type="password" name="credentials[password]" placeholder="Password" required>
+  <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+  <button class="btn">Sign Up</button>
+</form>
+</div>
+<div class="imgBx">
+  <img
+  src="./app/images/trees.jpg"
+  alt="nature">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Sign in form goes here-->
+<section id= "middle-sign-in">
+  <div class="container">
+    <div class="user signinBx">
+      <div class="imgBx">
+        <img src="./app/images/nice.jpg" alt="place">
+      </div>
+      <div class="formBx">
+<form id="sign-in">
+  <legend>Sign in</legend>
+  <input type="email" name="credentials[email]" placeholder="Email" required>
+  <input type="password" name="credentials[password]" placeholder="Password" required>
+  <button class="btn" >Sign in</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- We only want this  section to be visible after we sign in -->
+<section id="after-sign-in">
+  <form id="change-password" class="border">
+    <fieldset>
+      <legend>Change Password</legend>
+      <input type="password" name="passwords[old]" placeholder="Old Password" required>
+      <input type="password" name="passwords[new]" placeholder="New Password" required>
+      <button class="btn btn-secondary">Change Password</button>
+    </fieldset>
+  </form>
+</section>
+
+
+<!-- Sign out form goes here-->
+<section id ="after-sign-out">
+  <form id="sign-out" class="border">
+    <fieldset>
+      <h1>Psss.... Ready to leave</h1>
+      <input type="email" name="credentials[email]" placeholder="Email" required>
+      <input type="password" name="credentials[password]" placeholder="Password" required>
+      <button>Sign out </button>
+    </fieldset>
+  </form>
+</section>
+
+
+<!-- We only want this  section to be visible after we sign in -->
+<section id = "user-sign-in">
+  <h2>Get All Places </h2>
+  <button id="places-index">Get All Places </button>
+  <hr>
+
+  <h2>Get Place</h2>
+  <form id="place-show">
+    <input type="text" name="places[id]" placeholder="Places ID" required>
+    <!-- Since this button is inside a form, is has the type submit by default, clicked and form will be submitted -->
+    <button>Show My Place</button>
+  </form>
+  <hr>
+
+  <h2>Delete Place</h2>
+  <form id="place-to-delete">
+    <input type="text" name="places[id]" placeholder="Places ID" required>
+    <!-- Since this button is inside a form, is has the type submit by default,
+clicked and will delete the specific book -->
+    <button>Destroy Place</button>
+  </form>
+
+  <h2>Update Place</h2>
+  <form id="place-update">
+ <input type="text" name="place[id]" placeholder="Place ID" required>
+  <input type="text" name="place[name]" placeholder="Name" required>
+  <input type="text" name="place[address]" placeholder="Address" required>
+  <input type="text" name="place[location]" placeholder="Location" required>
+  <input type="text" name="place[description]" placeholder="Description" required>
+    <!-- Since this button is inside a form, is has the type submit by default,
+clicked and will update the specific book -->
+    <button>Update Place</button>
+  </form>
+  <hr>
+
+  <h2>Create New Place</h2>
+  <form id="place-create">
+    <input type="text" name="place[name]" placeholder="Name" required>
+    <input type="text" name="place[address]" placeholder="Address" required>
+    <input type="text" name="place[location]" placeholder="Location" required>
+    <input type="text" name="place[description]" placeholder="Description" required>
+    <!-- Since this button is inside a form, is has the type submit by default,
+clicked and will create the specific book -->
+    <button>Create Place</button>
+  </form>
+
+</section>
+
+
+
+
+<!-- Create a section for our user feedback-->
+<section>
+  <div id="error-message"></div>
+  <div id="message-display"></div>
+  <div id="winner-message"></div>
+  <div id="places-display"></div>
+</section>
+
+
+
+ </body>
+</html>
