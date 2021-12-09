@@ -20,10 +20,10 @@ const onIndexBooksSuccess = function (responseData) {
           Destroy Place
           </button>
         <form class="places-update-dynamic" data-id=${places._id}>
-        <input type="text" name="places[name]" placeholder="Name" required>
-        <input type="text" name="places[address]" placeholder="Address" required>
-        <input type="text" name="places[location]" placeholder="Location" required>
-        <input type="text" name="places[description]" placeholder="Description" required>
+        <input type="text" name="place[name]" placeholder="Name" required>
+        <input type="text" name="place[address]" placeholder="Address" required>
+        <input type="text" name="place[location]" placeholder="Location" required>
+        <input type="text" name="place[description]" placeholder="Description" required>
           <button>
           Update Place
           </button>
